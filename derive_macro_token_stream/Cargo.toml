@@ -1,0 +1,19 @@
+[package]
+name = "test_merkle_tree"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"          # For error handling
+sqlx = { version = "0.7", features = ["postgres", "runtime-tokio-native-tls"] } # For database handling
+async-trait = "0.1"     # For async functions in traits
+tokio = { version = "1", features = ["full"] } # For async runtime
+poseidon-rs = "0.0.10"
+ff = {package="ff_ce" , version="0.11", features = ["derive"]}
+rand = "0.8.5"
+syn = "1.0"
+
+quote = "1.0"
+proc-macro2 = "1.0"
+tree_proc_macros = {path = "./tree_proc_macros"}
+merkle_tree_storage = {path = "./merkle_tree_storage"}
